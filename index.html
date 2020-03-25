@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Form Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <form action="" class="input-group">
+    <div class="title">
+      <b class="front">Form</b><b class="back">Login</b>
+    </div>
+    <div class="form">
+      <input type="text">
+      <span data-placeholder="Masukan Email"></span>
+    </div>
+    <div class="form">
+      <input type="password">
+      <span data-placeholder="Password"></span>
+    </div>
+    <button>Masuk</button>
+  </form>
+
+  <script type="text/javascript">
+    $(".form input").on("focus", function () {
+      $(this).addClass("focus");
+    });
+    $(".form input").on("blur", function () {
+      if ($(this).val() == "")
+        $(this).removeClass("focus");
+    });
+  </script>
+
+</body>
+
+</html>
